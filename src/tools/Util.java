@@ -13,12 +13,16 @@ import javax.swing.JComponent;
  */
 public class Util {
 
-    public void habilitar(JComponent... components) {
-        for (int i = 0; i < components.length; i++) {
-            components[i].setEnabled(false); 
+    public static void habilitar(boolean valor, JComponent... componentes) {
+        for (int i = 0; i < componentes.length; i++) {
+            componentes[i].setEnabled(valor);
         }
-
-        
     }
 
+    public static void limpar(JComponent ... components) {
+        for (int i = 0; i < components.length; i++) {
+            ((JTextField)components[i]).setText("");
+            
+        }
+    }
 }
